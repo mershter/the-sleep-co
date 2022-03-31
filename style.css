@@ -4,3 +4,35 @@
     box-sizing: border-box;
 }
 
+/* temporary styles for structural html*/
+
+*{
+    padding: 0.5rem;
+    border: 2px solid rgb(240,240,240);
+}
+
+body{
+    border: none;
+}
+
+html{
+    border: none;
+}
+
+.bg-image {
+    background-image: url('/images/images/the-sleep-co-bed.jpg');
+    background-size: cover;
+    min-height: 10rem;
+}
+
+/* universal styles and utility classes*/
+
+.padded{padding: 5%;}
+
+.padded-sm{padding: 1rem;}
+
+.bgdark{
+    background-color: #223542;
+    color: white;
+}
+
