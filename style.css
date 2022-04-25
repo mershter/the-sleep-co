@@ -217,3 +217,9 @@ footer a{
 .logo{
     border-bottom: none;
 }
+
+input, 
+textarea{
+    display: block;
+    width: 100%;
+}
