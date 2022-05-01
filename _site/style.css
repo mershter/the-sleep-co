@@ -14,6 +14,9 @@
     border: 2px solid rgb(240,240,240);
 }*/
 
+.gallery [class*="col-"]{
+    padding: 0.2rem;
+}
 
 /* Re-usable Utiity Classes  */
 .tall-50 { min-height: 50vh; }
@@ -52,15 +55,52 @@ h2, h3, h4, h5, h6{
 
 
 
-.bg-image {
-    background-image: url('/images/images/the-sleep-co-bed.jpg');
-    background-size: cover;
-    min-height: 10rem;
-}
 
-.landscape{padding-bottom: 66%;}
-.portrait{padding-bottom: 125%;}
-.landscape{padding-bottom: 66%;}
+
+.bg-image{
+    background-image: url('/images/images/the-sleep-co-bed.jpg');
+    background-color: rgb (240,240,240);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5%;
+}
+  
+.portrait-tall{
+    padding-bottom: 175%;
+}
+  
+.portrait{
+    padding-bottom: 125%;
+}
+  
+.square{
+    padding-bottom: 100%;
+}
+  
+  .landscape{
+    padding-bottom: 66%;
+  }
+  
+  .landscape-wide{
+    padding-bottom: 56%;
+  }
+  
+  .bg-pos-t{
+    background-position: top;
+  }
+  
+  .bg-pos-b{
+    background-position: bottom;
+  }
+  
+  .bg-pos-l{
+    background-position: left;
+  }
+  
+  .bg-pos-r{
+    background-position: right;
+  }
 
 /* universal styles and utility classes*/
 
