@@ -18,6 +18,10 @@
     padding: 0.2rem;
 }
 
+.gallery .gallery-item{
+    border: none;
+}
+
 /* Re-usable Utiity Classes  */
 .tall-50 { min-height: 50vh; }
 .tall-60 { min-height: 60vh; }
