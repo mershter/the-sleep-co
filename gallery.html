@@ -1,40 +1,35 @@
 ---
 layout: default
-popup-gallery: true
-gallery-background: bg-dark
 gallery:
-   - column-size: col-4_sm-12
-      aspect-ratio: portrait-tall
-      background_image: /images/images/the-sleep-co-yellow.jpg
-      type: dog
-   - column-size: col-4_sm-12
-      aspect-ratio: portrait-tall
-      background_image: /images/images/the-sleep-co-pug.jpg
-      type: parrot
-   - column-size: col-4_sm-12
-      aspect-ratio: portrait-tall
-      background_image: /images/images/the-sleep-co-white.jpg
-      type: cat
-   - column-size: col-6
-      aspect-ratio: landscape-wide
-      background_image: /images/images/the-sleep-co-yellow.jpg
-      type: parrot
-   - column-size: col-6
-      aspect-ratio: landscape-wide
-      background_image: /images/images/the-sleep-co-pug.jpg
-      type: rabbit
+  - column-size: col-4_sm-12
+    aspect-ratio: square
+    background_image: /images/images/the-sleep-co-pug.jpg
+  - column-size: col-4_sm-12
+    aspect-ratio: square
+    background_image: /images/images/the-sleep-co-pug.jpg
+  - column-size: col-12
+    aspect-ratio: landscape
+    background_image: /images/images/the-sleep-co-pug.jpg
+  - column-size: col-6
+    aspect-ratio: landscape
+    background_image: /images/images/the-sleep-co-pug.jpg
+  - column-size: col-6
+    aspect-ratio: landscape
+    background_image: /images/images/the-sleep-co-pug.jpg
 ---
 
 <header class="padded-2 p-l-0 grid text-center tall-100">
 
-    {%include header-nav.html%}
-    <div class="col-12"> 
-    <h3 class="font-weight-bold editable" data-aos="fade-in" data-aos-duration="3000">
-        <span class="featured-text">explore</span> our world
-    </h3>
-    <h1 class="font-weight-normal editable" data-aos="fade-up" data-aos-duration="3000">
-        look at our beautiful and functional designs
-    </h1>
+    <div class="gallery grid">
+        {% for item in page.gallery %}
+    
+        <div class="{{item.column-size}}">
+          <div class="bg-image {{item.aspect-ratio}}"
+               style="background-image: url('{{item.background_image}}');">
+          </div>
+        </div>
+    
+        {% endfor %}
     </div>
 </header>
 
@@ -54,17 +49,14 @@ gallery:
 {%if page.popup-gallery==true%}
 <section class="padded {{page.gallery-background}}">
     <h2>Popup gallery</h2>
-    <div class="gallery grid" id="lightgallery">
-        {% for item in page.gallery %}
-        {% if item.type != 'dog' %}
-        <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
-          <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.  background_image}}')">
-          </div>
-        </a>
-        {% endif %}
-        {% endfor %}
-       
-        
+    <div class="gallery grid">
+		{% for item in page.gallery %}
+
+		    <div class="col-6">
+		      <div class="bg-image square bg-img-1"></div>
+		    </div>
+
+		{% endfor %}
     </div>
 </section>
 
@@ -82,5 +74,7 @@ gallery:
     </div>
 </section>
 {%endif%}
+
+{%include testimonial.html%}
 
 
