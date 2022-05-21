@@ -1,0 +1,30 @@
+--- 
+layout: default
+alphabet:
+ - letter: a
+   words:
+    - name: africa
+      description: lorem ipsum sid dolores 
+ - letter: b
+   words:
+     - name: beatllejuice
+       description: lorem ipsum sid dolores
+--- 
+
+{%for big in page.alphabet%}
+<a href="#{{big.letter}}">{{big.letter}}</a>
+
+
+{%endfor%}
+
+
+{%for big in page.alphabet%}
+<h2 id="{{big.letter}}">{{big.letter}}</h2>
+{%for small in big.words %}
+<h3>{{small.name}}</h3>
+<p>{{small.description}}</p>
+{%endfor%}
+{%endfor%}
+
+
+
